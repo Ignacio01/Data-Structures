@@ -88,12 +88,16 @@ public class Queue<E> {
      *  item is the new node that will be added in the Queue
      */
     public void add(Node<E> item){
+        Node<E> previous;
         if(this.front.equals(null) && this.rear.equals(null)){
             this.front = item;
             this.rear = item;
             size++;
         }else{
+            previous = this.rear;
             this.rear = item;
+            this.rear.setPrevLink(previous);
+            previous.setPrevLink(this.rear);
             size++;
         }
     }
@@ -121,6 +125,7 @@ public class Queue<E> {
         else{
             removedElement = this.front;
             this.front = removedElement.getNextLink();
+            this.front.setPrevLink(null);
             size--;
         }
         return removedElement;
