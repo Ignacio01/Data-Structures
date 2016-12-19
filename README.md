@@ -1,4 +1,4 @@
-This folder contains different data structures I am learning in my Data Structure class at Boston University.
+This folder contains different data structures I am learning in my Data Structure class at Boston University. The book used to practice the code is Data Structures & Other Objects Using Java by Michael Main
 
 1) Queues:
   
